@@ -1,0 +1,22 @@
+# Large / generated assets — not meant for git
+tools/sam2/*.pt
+assets/raw/
+assets/preview/
+assets/derived/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node (if any tooling gets added later)
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+
+# Local Claude Code preview server config
+.claude/
