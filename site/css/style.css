@@ -188,7 +188,7 @@ main { position: relative; z-index: 1; background: var(--ink); }
 .rulebook { list-style: none; display: flex; flex-direction: column; }
 .rulebook li { font-family: var(--f-type); font-size: clamp(19px, 1.8vw, 25px); line-height: 1.35; padding: 18px 0; border-bottom: 1px dashed var(--line); display: grid; grid-template-columns: 96px 1fr; gap: 16px; }
 .rulebook span { font-family: var(--f-mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--red); padding-top: 6px; }
-.rulebook em { display: block; font-style: normal; font-family: var(--f-body); font-size: 15px; color: var(--muted); margin-top: 4px; }
+.rulebook em { grid-column: 2; display: block; font-style: normal; font-family: var(--f-body); font-size: 15px; color: var(--muted); margin-top: 4px; }
 .rules__side { position: relative; padding-top: 120px; }
 .rules__phone { position: absolute; top: -10px; right: 0; width: clamp(160px, 18vw, 240px); filter: drop-shadow(0 24px 30px rgba(0, 0, 0, .6)); }
 .faq details { border: 1px solid var(--line); background: rgba(11, 15, 14, .8); margin-bottom: 10px; }
@@ -197,7 +197,7 @@ main { position: relative; z-index: 1; background: var(--ink); }
 .faq summary::after { content: "+"; font-family: var(--f-mono); color: var(--red); font-size: 20px; line-height: 1; }
 .faq details[open] summary::after { content: "−"; }
 .faq details p { padding: 0 20px 20px; color: var(--muted); font-size: 15px; }
-@media (max-width: 860px) { .rules__grid { grid-template-columns: 1fr; } .rulebook li { grid-template-columns: 1fr; gap: 4px; } }
+@media (max-width: 860px) { .rules__grid { grid-template-columns: 1fr; } .rulebook li { grid-template-columns: 1fr; gap: 4px; } .rulebook em { grid-column: auto; } }
 
 /* ---------- Join ---------- */
 .join { position: relative; min-height: 92vh; display: grid; place-items: center; text-align: center; padding: 120px var(--gutter); overflow: hidden; border-top: 1px solid var(--line); }
