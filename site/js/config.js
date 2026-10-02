@@ -1,8 +1,8 @@
 /* CodeVerse 2.0 · the one file you edit.
    Everything on the site that changes over time lives here. */
 window.CONFIG = {
-  // TODO: replace with the event's Unstop page. Every "Join the crew" button uses it.
-  unstopUrl: 'https://unstop.com/',
+  // The event's Unstop page. Every "Join the crew" button uses it.
+  unstopUrl: 'https://unstop.com/p/codeverse-20-svkms-dwarkadas-j-sanghvi-college-of-engineering-1763146',
 
   // Dates are IST (+05:30). Registration closes at the end of 6 October.
   registrationOpens: '2026-09-29T00:00:00+05:30',
@@ -14,8 +14,11 @@ window.CONFIG = {
   seatsTotal: 45,
   seatsTaken: null,
 
-  instagram: 'djscodeai',
-  contact: { name: 'Adish Shah', phone: '+919819486535', display: '+91 98194 86535' },
+  instagram: 'djs_codeai',
+  contacts: [
+    { name: 'Meet Dawda', phone: '+918007852752', display: '+91 80078 52752' },
+    { name: 'Juee Shimpi', phone: '+918975136588', display: '+91 89751 36588' },
+  ],
 
   venue: {
     name: 'Dwarkadas J. Sanghvi College of Engineering',
@@ -29,5 +32,8 @@ window.CONFIG = {
   // crew: [{ codename: 'Tokyo', name: 'Full Name', role: 'Organizer', photo: 'assets/crew/tokyo.jpg' }]
   crew: [],
 
-  shareText: 'Join our crew for CodeVerse 2.0, a Money Heist themed event on 9 October at DJSCE. Teams of 3. ₹99.',
+  // Names scrolling in the footer marquee. Empty hides it.
+  team: ['Aarya', 'Saad', 'Yug', 'Ashutosh', 'Bhavya Chawda', 'Husein', 'Pradnya Bhamre', 'Pratham Vithalani', 'Riya Duddalwar', 'Riya Vora', 'Shivansh Vyas', 'Vicky'],
+
+  shareText: 'Join our crew for CodeVerse 2.0, a Money Heist themed event on 9 October at DJSCE. Teams of 2–3. ₹149 per team.',
 };

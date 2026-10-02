@@ -20,13 +20,13 @@ All public copy for the website, in page order. Edit the wording here first, the
 | **Advance to Phase 2** | Top 10 |
 | **Winner** | The first crew to collect every hint in Phase 2 |
 | **Registration** | On Unstop, 29 September to 6 October 2026 |
-| **Fee** | ₹99 registration fee |
+| **Fee** | ₹149 registration fee per team |
 | **Eligibility** | Open to everyone. Any college, any branch, any level |
 | **Prize pool** | ₹25,000 (₹12,000 · ₹8,000 · ₹5,000) + trophies for the top three; e-certificate for every participant |
-| **Instagram** | @djscodeai |
-| **Contact** | Adish Shah · +91 98194 86535 (call and WhatsApp) |
+| **Instagram** | @djs_codeai |
+| **Contact** | Meet Dawda · +91 80078 52752 · Juee Shimpi · +91 89751 36588 |
 
-**Still to confirm:** Unstop link · whether the ₹99 fee is per team or per person.
+**Unstop:** https://unstop.com/p/codeverse-20-svkms-dwarkadas-j-sanghvi-college-of-engineering-1763146
 
 ---
 
@@ -62,14 +62,14 @@ The hero plays as five beats while the visitor scrolls.
 | Beat | Kicker | Line |
 |---|---|---|
 | 1 | Madrid · 09.10 · Operation CodeVerse | Today, the training ends. Today, you go in. |
-| 2 | The Professor presents | **CODEVERSE 2.0** — Forty-five crews of three. One mint. |
+| 2 | DJS Code AI · Powered by Unstop | **CODEVERSE 2.0** — One plan. One code. One heist. |
 | 3 | Phase 01 · Entry | Two phases. Ten hours. No second chances. |
 | 4 | Phase 02 · The Loot | **₹25,000** — Inside the vault. Waiting for the right crew. |
 | 5 | The heist begins 09 October | The Professor is recruiting. **[Join the crew →]** |
 
 Extras: "Scroll to break in" · "Skip intro ↓" · loading screen text: "Breaking in…"
 
-**Static version (reduced motion):** Madrid · 09.10 · Operation CodeVerse / **CODEVERSE 2.0** / Forty-five crews of three. One mint. / **[Join the crew →]**
+**Static version (reduced motion):** Madrid · 09.10 · Operation CodeVerse / **CODEVERSE 2.0** / One plan. One code. One heist. / **[Join the crew →]**
 
 Image description: *Two crew members in red jumpsuits walk through an open vault door, past stacks of cash.*
 
@@ -185,13 +185,13 @@ Every participant receives an e-certificate.
 ### FAQ
 
 **How do I register?**
-Registration runs on Unstop from 29 September to 6 October. Hit *Join the crew*, form your team of three there and you're in.
+Registration runs on Unstop from 29 September to 6 October. Hit *Join the crew*, form your team of 2–3 there and you're in.
 
 **How many crews can enter?**
 Forty-five. Once the seats are gone, the door closes.
 
 **Is there a registration fee?**
-Yes. The registration fee is ₹99.
+Yes. The registration fee is ₹149 per team.
 
 **Where does the heist happen?**
 Dwarkadas J. Sanghvi College of Engineering, Mumbai, on 9 October.
@@ -226,10 +226,10 @@ Bhaktivedanta Swami Marg, Vile Parle (West), Mumbai
 **Kicker:** 09 October · Registration closes 6 October
 **Heading:** ENTER THE MINT
 **Line:** The Professor has a plan. All he needs is your crew.
-**Details:** Dwarkadas J. Sanghvi College of Engineering · ₹99 registration fee
+**Details:** Dwarkadas J. Sanghvi College of Engineering · ₹149 registration fee per team
 **Buttons:** **Join the crew on Unstop →** · Send this to your crew
 
-**Share message:** Join our crew for CodeVerse 2.0, a Money Heist themed event on 9 October at DJSCE. Teams of 3. ₹99.
+**Share message:** Join our crew for CodeVerse 2.0, a Money Heist themed event on 9 October at DJSCE. Teams of 2–3. ₹149 per team.
 
 ---
 
@@ -239,7 +239,7 @@ Bhaktivedanta Swami Marg, Vile Parle (West), Mumbai
 
 Links: The Briefing · The Plan · Schedule · The Loot · Rules · Instagram
 
-Questions? Adish Shah · +91 98194 86535 · WhatsApp · @djscodeai
+Questions? Meet Dawda · +91 80078 52752 · Juee Shimpi · +91 89751 36588 · @djs_codeai
 
 © 2026 CodeVerse · A fan-inspired event theme, not affiliated with Netflix.
 
@@ -254,7 +254,7 @@ Sound button: ♪ Sound: off / on
 | **Page title** | CodeVerse 2.0 · The Heist |
 | **Description** | CodeVerse 2.0: a heist-themed tech event on 9 October. The Professor is recruiting. |
 | **Preview title** | CodeVerse 2.0 · The Heist |
-| **Preview description** | Forty-five crews of three. One mint. 9 October at DJSCE Mumbai. ₹25,000 in prizes. |
+| **Preview description** | One plan. One code. One heist. Crews of 2–3, 9 October at DJSCE Mumbai. ₹25,000 in prizes. |
 | **Preview image line** | Forty-five crews of three. One mint. |
 
 ---
@@ -262,7 +262,7 @@ Sound button: ♪ Sound: off / on
 ## Copy still to write or confirm
 
 - [ ] Unstop registration link
-- [ ] Is ₹99 per team or per person?
+- [x] Fee is ₹149 per team.
 - [ ] Sponsors (names and logos), if any
 - [ ] Organizer names, roles and photos, if you want a Crew section
 - [ ] Any extra FAQs (parking, food, certificates, team changes)
