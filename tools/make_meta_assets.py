@@ -51,25 +51,39 @@ def og_image() -> None:
 
 
 def favicon() -> None:
-    svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#0b0f0e"/>
-  <rect x="0" y="0" width="7" height="64" rx="3" fill="#c4201d"/>
-  <text x="36" y="46" text-anchor="middle" font-family="Impact, 'Arial Narrow', sans-serif" font-size="40" fill="#efeae0">C</text>
-  <circle cx="50" cy="16" r="5" fill="#c4201d"/>
-</svg>
-'''
+    """Icons from the Dali mask on the event poster (tools/icon-mask.png, transparent, square)."""
+    import base64
+    import io
+
+    mask = Image.open(ROOT / "tools" / "icon-mask.png").convert("RGBA")
+
+    def on_tile(size: int, pad: float, bg=INK) -> Image.Image:
+        tile = Image.new("RGBA", (size, size), bg + (255,) if bg else (0, 0, 0, 0))
+        inner = round(size * (1 - 2 * pad))
+        m = mask.resize((inner, inner), Image.LANCZOS)
+        tile.alpha_composite(m, ((size - inner) // 2, (size - inner) // 2))
+        return tile
+
+    # SVG wrapper around a 128px PNG: keeps the favicon.svg URL working in every browser that reads SVG icons.
+    buf = io.BytesIO()
+    on_tile(128, 0.0, bg=None).save(buf, "PNG", optimize=True)
+    b64 = base64.b64encode(buf.getvalue()).decode()
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">\n'
+        f'  <image width="64" height="64" href="data:image/png;base64,{b64}"/>\n'
+        "</svg>\n"
+    )
     (SITE / "favicon.svg").write_text(svg, encoding="utf-8")
 
-    S = 180
-    icon = Image.new("RGB", (S, S), INK)
-    d = ImageDraw.Draw(icon)
-    d.rectangle([0, 0, 20, S], fill=RED)
-    d.text((S // 2 + 8, S // 2 + 6), "C", font=font("impact.ttf", 120), fill=PAPER, anchor="mm")
-    d.ellipse([S - 46, 16, S - 22, 40], fill=RED)
-    icon.save(SITE / "apple-touch-icon.png")
+    # .ico fallback for Safari and older browsers (transparent, mask fills the frame).
+    on_tile(48, 0.0, bg=None).save(SITE / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+    on_tile(32, 0.0, bg=None).save(SITE / "favicon-32.png", optimize=True)
+
+    # iOS ignores transparency, so the touch icon sits on the site's ink background with breathing room.
+    on_tile(180, 0.1).convert("RGB").save(SITE / "apple-touch-icon.png", optimize=True)
 
 
 if __name__ == "__main__":
     og_image()
     favicon()
-    print("wrote og.jpg, favicon.svg, apple-touch-icon.png")
+    print("wrote og.jpg, favicon.svg, favicon.ico, favicon-32.png, apple-touch-icon.png")

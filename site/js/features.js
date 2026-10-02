@@ -131,7 +131,7 @@
     const stamp = ms => new Date(ms).toISOString().replace(/[-:]|\.\d{3}/g, '');
     const title = 'CodeVerse 2.0 · The Heist';
     const where = `${C.venue.name}, ${C.venue.address}`;
-    const desc = `Money Heist themed tech event. Crews of 3. Registration desk opens at 08:00.`;
+    const desc = `Money Heist themed tech event. Crews of 2–3. AIML Department, DJSCE. Registration desk opens at 08:00.`;
     const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//CodeVerse//2.0//EN', 'BEGIN:VEVENT',
       `UID:codeverse2-${stamp(T.start)}@codeverse`, `DTSTAMP:${stamp(Date.now())}`, `DTSTART:${stamp(T.start)}`, `DTEND:${stamp(T.end)}`,
       `SUMMARY:${title}`, `LOCATION:${where.replace(/,/g, '\\,')}`, `DESCRIPTION:${desc.replace(/,/g, '\\,')}`, 'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
@@ -175,6 +175,14 @@
     $('#crewGrid').innerHTML = C.crew.map(m => `<article class="dossier">
       <div class="dossier__photo">${m.photo ? `<img src="${esc(m.photo)}" alt="${esc(m.name)}" loading="lazy" decoding="async">` : '<img class="is-mask" src="assets/props/mask.webp" alt="" loading="lazy" decoding="async">'}</div>
       <p class="dossier__code">${esc(m.codename)}</p><h3>${esc(m.name)}</h3><p class="dossier__role">${esc(m.role)}</p></article>`).join('');
+  }
+
+  /* ---------------------------------------------------------------- footer marquee (two copies of the list loop seamlessly) */
+  if (C.team?.length) {
+    const list = C.team.map(n => `<span>${esc(n)}</span>`).join('');
+    $('#teamTrack').innerHTML = `<div class="marquee__group">${list}</div><div class="marquee__group" aria-hidden="true">${list}</div>`;
+    $('#teamTrack').style.setProperty('--dur', `${Math.max(20, C.team.length * 3)}s`);
+    $('#teamMarquee').hidden = false;
   }
 
   /* ---------------------------------------------------------------- count-up numbers + typewriter kickers */
